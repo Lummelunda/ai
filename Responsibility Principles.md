@@ -1,4 +1,4 @@
-# **Human–AI Work Framework**
+# **Responsibility Principles**
 
 **From content generation to thinking infrastructure**
 
