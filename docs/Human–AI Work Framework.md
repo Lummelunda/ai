@@ -18,6 +18,20 @@ AI can perform increasingly sophisticated cognitive operations, but can't:
 
 These aren't limitations that better models will solve. They're structural features of the relationship,  humans, not AI, exist in organizations, have reputations, and face consequences.
 
+## **Structural Preconditions for Delegation**
+
+AI capabilities are not uniformly reliable across all forms of input.
+
+The same cognitive operation (for example evaluation or synthesis) may succeed or fail depending on how information is structured.
+
+Delegation therefore requires not only clear intent and framing, but appropriate information architecture.
+
+When outputs degrade, the cause is often not incorrect judgement or poor prompting, but a mismatch between the task and the structure of the provided context.
+
+Responsibility remains human, but reliability depends on structure.
+
+For this reason, responsibility discipline and context architecture must be treated as complementary, not interchangeable.
+
 ## **The Human Role**
 
 Four responsibilities that define your role:
