@@ -6,7 +6,7 @@
 
   
 
-This document translates the Human–AI Responsibility Framework and Context Architecture into **practical operating patterns**.
+This document translates the Agency Principles and Context Principles into **practical operating patterns**.
 
   
 
