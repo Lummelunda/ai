@@ -18,7 +18,11 @@ Once that list existed, the human side became unavoidable.
 
   
 
-Every time AI output fell flat, the problem traced back to the same source: I hadn’t been clear about intent, hadn’t framed the problem properly, or hadn’t applied judgement critically. The quality depended far less on clever prompts than on whether humans held their ground. This led to the first core insight of the framework: AI can perform cognitive operations, but humans must retain intent, judgement, and accountability.
+Every time AI output fell flat, the problem traced back to the same source: I hadn’t been clear about intent, hadn’t framed the problem properly, or hadn’t applied judgement critically. The quality depended far less on clever prompts than on whether humans held their ground. This led to the first core insight of the framework:
+
+  
+
+**AI can perform cognitive operations, but humans must retain intent, judgement, and accountability.**
 
   
 
@@ -36,19 +40,29 @@ That revealed a second boundary.
 
 Responsibility determines _who_ owns outcomes.
 
-Structure determines _whether delegation works at all_.
+Structure strongly influences _how reliably delegation works_.
 
   
 
-This is where the framework expanded. Clear responsibility is necessary, but not sufficient. Reliable collaboration also requires discipline in how information is shaped, separated, and provided to the model depending on the task being delegated.
+Clear responsibility is necessary, but not sufficient. In practice, reliable collaboration also depends on how information is shaped, separated, and provided to the model for the task at hand.
 
   
 
-The framework therefore consists of two complementary parts:
+As the framework evolved, a third need became explicit.
 
-- **Agency and responsibility**, which defines what humans must always retain and where delegation is legitimate.
+  
+
+Even with clear responsibility and better structure, work still degraded when collaboration remained implicit. What was missing was a way to translate principles into repeatable behaviour: when judgement re-enters, how tasks are sequenced, and how humans and AI take turns without blurring roles.
+
+  
+
+The framework therefore consists of three complementary parts:
+
+- **Agency Principles**, which define what humans must always retain and where delegation is legitimate.
     
-- **Context architecture**, which defines how information must be structured so AI reasoning remains reliable rather than drifting or over-generalising.
+- **Context Principles**, which describe how information structure influences reliability and failure modes.
+    
+- **Operational Companion**, which translates both into practical working patterns.
     
 
   
@@ -57,11 +71,19 @@ Together, they form a single operating framework.
 
   
 
-The goal is not automation. It is predictable collaboration.
+The goal is not automation.
 
   
 
-When responsibilities are explicit and information is structured intentionally, AI becomes a cognitive multiplier rather than a source of hidden risk.
+It is **predictable collaboration**.
+
+  
+
+The framework does not promise correctness, safety, or elimination of risk. It does not assume that better structure or better models remove uncertainty. Instead, it aims to make uncertainty visible, delegation deliberate, and responsibility explicit.
+
+  
+
+When roles are clear and context is shaped intentionally, AI becomes a cognitive multiplier rather than a source of hidden drift.
 
   
 
@@ -80,3 +102,5 @@ Everything in this framework exists to make that boundary usable in daily work, 
   
 
 (This framework emerged from hands-on work with language models, primarily text and code generation. Examples reflect that origin, but the principles are modality-agnostic.)
+
+---
