@@ -1,6 +1,7 @@
-# **Context Architecture Principles**
+# **Context Principles**
 
   
+
 **How to structure information so AI reasoning stays reliable**
 
 ---
@@ -9,38 +10,40 @@
 
   
 
-**AI reliability depends more on information structure than on model capability.**
+**AI reliability is strongly influenced by information structure, often as much as by model capability.**
 
   
 
-Large language models do not distinguish between facts, narrative, constraints, or examples unless those distinctions are made explicit.
+Large language models do not inherently distinguish between facts, narrative, constraints, or examples unless those distinctions are made explicit.
 
   
 
-When information types are mixed, outputs drift.
+When information roles blur, reasoning becomes ambiguous and outputs are more likely to drift.
 
   
 
-Context architecture exists to prevent that collapse.
+Context principles exist to reduce that ambiguity and make failure more visible, not to guarantee correctness.
 
 ---
 
-## **What context architecture governs**
+## **What context principles govern**
 
   
 
-Context architecture defines:
+Context principles define:
 
 - what information is provided
     
 - what role that information plays
     
-- what type of reasoning the model is allowed to perform
+- what type of reasoning the model is encouraged to perform
     
 
   
 
-It does **not** define intent, goals, or decisions.
+They do **not** define intent, goals, values, or decisions.
+
+  
 
 Those remain human responsibilities.
 
@@ -50,11 +53,17 @@ Those remain human responsibilities.
 
   
 
-AI operates in different functional modes depending on task and input structure.
+AI behaviour shifts depending on task framing and input structure.
 
   
 
-Selecting the wrong mode is the most common cause of failure.
+Selecting a mismatched mode is one of the most common causes of degraded output.
+
+  
+
+These modes are functional descriptions, not strict partitions.
+
+They describe tendencies, not guarantees.
 
 ---
 
@@ -83,7 +92,7 @@ Used for:
 
   
 
-Requires:
+Works best with:
 
 - explicit categories
     
@@ -94,7 +103,7 @@ Requires:
 
   
 
-Fails when given narrative or persuasive prose.
+Performance degrades when inputs rely primarily on narrative or persuasive prose.
 
 ---
 
@@ -121,7 +130,7 @@ Used for:
 
   
 
-Requires:
+Works best with:
 
 - continuous prose
     
@@ -132,7 +141,7 @@ Requires:
 
   
 
-Fails when input is overly rigid or symbolic.
+Performance degrades when inputs are overly rigid, symbolic, or prematurely constrained.
 
 ---
 
@@ -140,7 +149,7 @@ Fails when input is overly rigid or symbolic.
 
   
 
-**Measure against fixed truth**
+**Measure against fixed reference**
 
   
 
@@ -152,12 +161,12 @@ Used for:
     
 - drift detection
     
-- hallucination prevention
+- hallucination reduction
     
 
   
 
-Requires:
+Works best with:
 
 - authoritative reference
     
@@ -168,17 +177,21 @@ Requires:
 
   
 
-Fails when reference is mixed with interpretation or persuasion.
+Performance degrades when reference material is mixed with interpretation, persuasion, or speculative language.
 
 ---
 
-## **Information types and allowed roles**
+## **Information types and typical roles**
 
   
 
-Each type of context supports exactly one primary function.
+Different context types tend to support different reasoning functions.
 
   
+
+Blending roles is sometimes workable, but increases cognitive load and error probability.
+
+---
 
 ### **Canonical reference**
 
@@ -186,18 +199,20 @@ Each type of context supports exactly one primary function.
 
 Purpose:
 
-- define what is true
+- define what is treated as true
     
 - define hard constraints
     
-- prevent drift
+- limit drift
     
 
   
 
-Used for: calibration
+Primarily used for: calibration
 
-Must not persuade or speculate.
+  
+
+Should avoid persuasion, interpretation, or speculation.
 
 ---
 
@@ -207,16 +222,18 @@ Must not persuade or speculate.
 
 Purpose:
 
-- enable judgement
-    
 - constrain reasoning space
+    
+- enable comparison and evaluation
     
 
   
 
-Used for: evaluation, selection, comparison
+Primarily used for: discriminative reasoning
 
-Optimised for discriminative reasoning.
+  
+
+Optimised for judgement, not explanation.
 
 ---
 
@@ -226,14 +243,16 @@ Optimised for discriminative reasoning.
 
 Purpose:
 
-- enable understanding and articulation
+- support understanding and articulation
     
 
   
 
-Used for: explanation, writing, framing
+Primarily used for: generative reasoning
 
-Optimised for generative reasoning.
+  
+
+Optimised for expression, not decision-making.
 
 ---
 
@@ -243,43 +262,53 @@ Optimised for generative reasoning.
 
 Purpose:
 
-- speed and recall
+- speed, recall, convenience
     
 
   
 
-Used for: convenience only
+Used as working material only.
 
-Never a source of truth.
+  
+
+Should not be treated as authoritative sources of truth.
 
 ---
 
-## **Hard rules**
+## **Operational guidelines**
 
-1. No document may serve more than one primary role.
+  
+
+The following are not hard prohibitions, but reliability guidelines.
+
+  
+
+Violating them does not cause automatic failure, but increases ambiguity and the burden on human judgement.
+
+1. Documents serving multiple roles increase risk of semantic drift.
     
-2. Canonical reference is never derived from narrative.
+2. Deriving canonical reference from narrative increases hidden assumptions.
     
-3. Structured context constrains; it does not explain.
+3. Structured context constrains reasoning but does not explain meaning.
     
-4. Prose explains; it does not decide.
+4. Prose explains meaning but should not be treated as decisive.
     
-5. Summaries are never authoritative.
+5. Summaries trade fidelity for speed and should not be authoritative.
     
 
   
 
-Breaking these rules produces semantic drift.
+These guidelines exist to make reasoning boundaries legible, not rigid.
 
 ---
 
 ## **Context selection cheat sheet**
 
-|**Task**|**Preferred input**|**AI mode**|**Why it works**|
+|**Task**|**Preferred input**|**AI mode**|**Why it helps**|
 |---|---|---|---|
-|Decide, evaluate, compare|Structured reference|Discriminative (A)|Collapses the possibility space|
+|Decide, evaluate, compare|Structured reference|Discriminative (A)|Narrows the possibility space|
 |Explain, write, teach, frame|Prose context|Generative (B)|Enables linguistic flow|
-|Check, validate, ground|Canonical reference|Calibration (C)|Measures against fixed truth|
+|Check, validate, ground|Canonical reference|Calibration (C)|Measures against stable reference|
 
 ---
 
@@ -293,27 +322,27 @@ Before providing context, ask:
 
 **1. Am I asking the model to judge or choose?**
 
-→ Use structured semantic reference (Mode A)
+→ Structured semantic reference (Mode A)
 
   
 
 **2. Am I asking the model to explain or express?**
 
-→ Use prose context (Mode B)
+→ Prose context (Mode B)
 
   
 
 **3. Am I asking the model to verify correctness?**
 
-→ Use canonical reference (Mode C)
+→ Canonical reference (Mode C)
 
   
 
-If the answer is “all of the above”, split the task.
+If the honest answer is “more than one,” separate the task.
 
   
 
-Do not combine modes in a single prompt.
+Combining modes is sometimes useful, but should be done consciously and with increased human review.
 
 ---
 
@@ -321,9 +350,11 @@ Do not combine modes in a single prompt.
 
   
 
-Context architecture supports judgement.
+Context principles support judgement.
 
-It does not replace it.
+  
+
+They do not replace it.
 
   
 
@@ -340,7 +371,9 @@ Humans remain responsible for:
 
   
 
-AI performs operations within the boundaries context defines.
+Context shapes how the model reasons.
+
+It does not determine what should be decided.
 
 ---
 
@@ -350,8 +383,8 @@ AI performs operations within the boundaries context defines.
 
 > **Humans decide what matters.**
 
-> **Context determines how the model reasons.**
+> **Context influences how the model reasons.**
 
-> **AI generates intermediate output only.**
+> **AI produces intermediate output only.**
 
 ---
