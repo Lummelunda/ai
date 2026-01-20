@@ -1,4 +1,4 @@
-# **Appendix: Cognitive Modes **
+# **Appendix: Cognitive Modes**
 
   
 
