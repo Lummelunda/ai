@@ -27,7 +27,7 @@ This is not about writing better prompts.
 
   
 
-It is about **running cognitive work as a system**.
+It is about **running cognitive work deliberately**, rather than implicitly.
 
 ---
 
@@ -35,22 +35,28 @@ It is about **running cognitive work as a system**.
 
   
 
-**AI should never be asked to think and decide at the same time.**
+**AI should not be treated as both a reasoning engine and a decision authority in the same step.**
 
   
 
-Every failure mode observed in practice traces back to violations of this rule.
+Many observed failure modes trace back to this boundary becoming blurred.
 
   
 
-Instead:
+As a working discipline:
 
 - humans decide _what matters_
     
 - AI explores _what’s possible_
     
-- structure determines _what’s reliable_
+- structure influences _what’s reliable_
     
+
+  
+
+Some tasks require exploratory judgement and reasoning to coexist.
+
+In those cases, outputs must be treated as provisional and reviewed with higher vigilance.
 
 ---
 
@@ -58,7 +64,7 @@ Instead:
 
   
 
-Every AI interaction should be explicitly in one of these modes.
+Every AI interaction should have one dominant execution mode.
 
 |**Mode**|**Purpose**|**AI function**|**Human role**|
 |---|---|---|---|
@@ -66,7 +72,9 @@ Every AI interaction should be explicitly in one of these modes.
 |Mode B|Generate|explain, write, reframe|choose direction|
 |Mode C|Calibrate|check, ground, verify|decide authority|
 
-Mixing modes in a single step causes output degradation.
+Mixing modes is sometimes useful, but increases ambiguity and error risk.
+
+When modes are combined, human review must become correspondingly stronger.
 
 ---
 
@@ -89,7 +97,7 @@ Before invoking AI, clarify internally:
 
   
 
-If the outcome is irreversible or external, AI output must remain intermediate.
+If the outcome is irreversible or externally consequential, AI output should remain explicitly intermediate.
 
 ---
 
@@ -97,7 +105,7 @@ If the outcome is irreversible or external, AI output must remain intermediate.
 
   
 
-Pick one primary operation:
+Select one primary operation:
 
 - expansion
     
@@ -114,7 +122,7 @@ Pick one primary operation:
 
   
 
-Do not combine incompatible operations.
+Avoid combining incompatible operations in a single step when reliability matters.
 
   
 
@@ -126,7 +134,7 @@ Bad example:
 
   
 
-Good example:
+More reliable approach:
 
   
 
@@ -142,7 +150,7 @@ Good example:
 
   
 
-Select the context format that matches the task:
+Select the context format that matches the operation:
 
 |**Task**|**Context**|
 |---|---|
@@ -150,7 +158,7 @@ Select the context format that matches the task:
 |Explain, teach, narrate|prose|
 |Fact-check, align, verify|reference|
 
-If structure mismatches the task, no prompt refinement will fix it.
+When structure mismatches the task, improvements in prompting rarely compensate.
 
 ---
 
@@ -158,7 +166,7 @@ If structure mismatches the task, no prompt refinement will fix it.
 
   
 
-AI output must be:
+AI output should be:
 
 - reviewable
     
@@ -169,7 +177,7 @@ AI output must be:
 
   
 
-If you cannot comfortably say “this is a draft,” delegation has gone too far.
+If you cannot comfortably describe the result as a draft or working artefact, delegation has likely gone too far.
 
 ---
 
@@ -177,7 +185,7 @@ If you cannot comfortably say “this is a draft,” delegation has gone too far
 
   
 
-Humans must explicitly do one of the following:
+Humans explicitly decide to:
 
 - discard
     
@@ -192,7 +200,7 @@ Humans must explicitly do one of the following:
 
   
 
-If output is accepted implicitly, judgement laundering has occurred.
+If output is accepted implicitly, judgement has drifted rather than been exercised.
 
 ---
 
@@ -215,7 +223,7 @@ Use AI to:
 
   
 
-Never to:
+Not to:
 
 - choose direction
     
@@ -224,7 +232,7 @@ Never to:
 
   
 
-Morning work begins with judgement, not continuation.
+Work resumes with judgement, not continuation.
 
 ---
 
@@ -236,14 +244,14 @@ When reliability matters:
 
 1. Convert prose into structured blocks
     
-2. Run evaluation or comparison
+2. Perform evaluation or comparison
     
-3. Convert back into prose
+3. Convert results back into prose
     
 
   
 
-This isolates reasoning from narrative.
+This reduces interference between reasoning and narrative.
 
 ---
 
@@ -251,18 +259,18 @@ This isolates reasoning from narrative.
 
   
 
-For high-stakes writing:
+For higher-stakes writing:
 
-- first produce a “truth layer” (facts, constraints, claims)
+- first establish a “truth layer” (facts, constraints, claims)
     
-- then lock it
+- explicitly lock it
     
-- only then generate narrative
+- generate narrative only afterward
     
 
   
 
-This prevents silent drift.
+This does not prevent error, but makes drift easier to detect.
 
 ---
 
@@ -272,16 +280,16 @@ This prevents silent drift.
 
 When accuracy matters:
 
-- one document is declared authoritative
+- declare one document authoritative
     
-- AI is instructed to deviate only explicitly
+- instruct AI to flag deviations rather than silently correct them
     
-- mismatches are flagged, not corrected automatically
+- treat mismatches as review signals
     
 
   
 
-AI should _signal uncertainty_, not resolve it.
+AI should surface uncertainty, not resolve it autonomously.
 
 ---
 
@@ -293,16 +301,16 @@ Do not immediately rewrite prompts.
 
   
 
-Instead diagnose:
+First diagnose structural causes:
 
 |**Symptom**|**Likely cause**|
 |---|---|
-|Overconfident wrong answers|missing reference authority|
-|Shallow reasoning|prose used where structure required|
+|Overconfident wrong answers|missing or weak reference authority|
+|Shallow reasoning|prose used where structure was needed|
 |Incoherent output|multiple modes mixed|
-|“Sounds right” but wrong|judgement delegated|
+|“Sounds right” but wrong|judgement implicitly delegated|
 
-Fix structure before language.
+Adjust structure before language.
 
 ---
 
@@ -310,18 +318,22 @@ Fix structure before language.
 
   
 
-Used correctly, this operational model allows:
+Used consistently, this operational model can support:
 
 - reuse of context across tasks
     
-- stable collaboration with AI over time
+- more predictable collaboration with AI
     
 - separation of thinking from writing
     
-- safe scaling of AI involvement
+- scalable use of AI without surrendering ownership
     
-- reduction of cognitive fatigue without loss of control
+- reduced cognitive fatigue through clearer handoffs
     
+
+  
+
+These are tendencies, not guarantees.
 
 ---
 
@@ -329,7 +341,7 @@ Used correctly, this operational model allows:
 
   
 
-This framework does not support:
+This companion does not support:
 
 - autonomous decision-making
     
@@ -342,7 +354,7 @@ This framework does not support:
 
   
 
-Those remain structural impossibilities, not tooling gaps.
+Those limits are structural, not technical.
 
 ---
 
@@ -350,15 +362,15 @@ Those remain structural impossibilities, not tooling gaps.
 
   
 
-**If you cannot explain why the AI produced something, you cannot trust it.**
+**If you cannot explain why the AI produced something, you should not rely on it.**
 
   
 
 Understanding comes from:
 
-- knowing the mode
+- knowing the dominant mode
     
-- knowing the structure
+- knowing the context structure
     
 - knowing where judgement re-enters
     
@@ -369,15 +381,16 @@ That is the operational boundary.
 
 ---
 
-## **How the three documents now work together**
+## **How the three documents work together**
 
-| **Document**          | **Answers**                        |
-| --------------------- | ---------------------------------- |
-| Agency Principles     | Who owns what                      |
-| Context Architecture  | What structure enables reliability |
-| Operational Companion | How work actually runs             |
+|**Document**|**Answers**|
+|---|---|
+|Agency Principles|Who owns what|
+|Context Principles|How structure influences reliability|
+|Operational Companion|How work is run in practice|
 
 Together, they form:
 
+  
 
-**A complete thinking infrastructure, not a prompt technique.**
+**a disciplined approach to collaborating with AI — not a guarantee of correctness, and not a prompt technique.**
