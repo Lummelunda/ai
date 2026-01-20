@@ -102,5 +102,5 @@ Everything in this framework exists to make that boundary usable in daily work, 
   
 
 (This framework emerged from hands-on work with language models, primarily text and code generation. Examples reflect that origin, but the principles are modality-agnostic.)
-
+(The framework evaluation by Perplexity Pro with citations: https://www.perplexity.ai/search/agency-principles-from-content-703Vmz16SI62UsPY7e1vxw#0)
 ---
